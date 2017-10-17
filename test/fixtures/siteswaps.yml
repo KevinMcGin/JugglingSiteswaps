@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: String
+  description: MyText
+  difficulty: 1
+  image_url: MyString.gif
+
+two:
+  name: String2
+  description: MyText
+  difficulty: 9
+  image_url: MyString2.gif

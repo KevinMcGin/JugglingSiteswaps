@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @siteswap.name %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @siteswap.description %>
+</p>
+
+<p>
+  <strong>Difficulty:</strong>
+  <%= @siteswap.difficulty %>
+</p>
+
+<p>
+  <strong>Image url:</strong>
+  <%= @siteswap.image_url %>
+</p>
+
+<%= link_to 'Edit', edit_siteswap_path(@siteswap) %> |
+<%= link_to 'Back', siteswaps_path %>

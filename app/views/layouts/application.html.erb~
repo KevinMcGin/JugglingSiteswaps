@@ -1,0 +1,11 @@
+<!DOCTYPE html>
+<html>
+<%= content_tag :body, class: controller.controller_name do %>
+  <%= yield %>
+<% end %>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
