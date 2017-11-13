@@ -6,7 +6,7 @@ class Siteswap < ActiveRecord::Base
   validates :difficulty,numericality: { greater_than_or_equal_to: 1, less_than_or_equal_to: 10 }
   validates :image_url, allow_blank: true, format: {
   with: %r{\.(gif)\Z}i,
-  message: 'must be a URL for GIF image.'
-} 
+  message: 'must be a URL for GIF image.'}
+  validates :ball_count,numericality: { greater_than_or_equal_to: 3, less_than_or_equal_to: 13 } 
 
 end

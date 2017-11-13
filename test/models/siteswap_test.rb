@@ -16,13 +16,25 @@ class SiteswapTest < ActiveSupport::TestCase
   assert siteswap.valid?
   assert siteswap.errors[:difficulty].none?
   
-  siteswap.difficulty = 10
-  assert siteswap.valid?
-  assert siteswap.errors[:difficulty].none?
-
   siteswap.difficulty = 11
   assert siteswap.invalid?
   assert siteswap.errors[:difficulty].any?
 
-end
+  siteswap.difficulty = 10
+  assert siteswap.valid?
+  assert siteswap.errors[:difficulty].none?
+
+  siteswap.ball_count = 2
+  assert siteswap.invalid?
+  assert siteswap.errors[:ball_count].any?
+  
+  siteswap.ball_count = 15
+  assert siteswap.invalid?
+  assert siteswap.errors[:ball_count].any?
+
+  siteswap.ball_count = 5
+  assert siteswap.valid?
+  assert siteswap.errors[:ball_count].none?
+
+  end
 end

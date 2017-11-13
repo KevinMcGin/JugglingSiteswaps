@@ -14,12 +14,13 @@
       <dt><b><%= siteswap.name %></b></dt>
       <%= truncate strip_tags(siteswap.description), length: 240 %>
       <dt>Difficulty: <%= siteswap.difficulty %></dt>
+      <dt>Ball Count: <%= siteswap.ball_count %></dt>
   </dl>
 </td>
         <td class='list_actions'>
   <%= link_to 'Show', siteswap %><br/>
   <%= link_to 'Edit', edit_siteswap_path(siteswap) %><br/>
-  <%= link_to 'Destroy', siteswap, method: :delete, 
+  <%= link_to 'Destroy', siteswap, method: :destroy, 
       data: { confirm: 'Are you sure?' } %>
 </td>
       <% end %>

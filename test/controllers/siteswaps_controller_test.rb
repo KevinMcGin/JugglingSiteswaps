@@ -18,7 +18,7 @@ class SiteswapsControllerTest < ActionController::TestCase
 
   test "should create siteswap" do
     assert_difference('Siteswap.count') do
-      post :create, siteswap: { description: @siteswap.description, difficulty: @siteswap.difficulty, image_url: @siteswap.image_url, name: "Newest Siteswap" }
+      post :create, siteswap: { description: @siteswap.description, difficulty: @siteswap.difficulty, image_url: @siteswap.image_url, name: "Newest Siteswap", ball_count: @siteswap.ball_count }
     end
 
     assert_redirected_to siteswap_path(assigns(:siteswap))

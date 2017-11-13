@@ -5,9 +5,11 @@ one:
   description: MyText
   difficulty: 1
   image_url: MyString.gif
+  ball_count: 4
 
 two:
   name: String2
   description: MyText
   difficulty: 9
   image_url: MyString2.gif
+  ball_count: 5

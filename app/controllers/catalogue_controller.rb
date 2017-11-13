@@ -1,5 +1,5 @@
 class CatalogueController < ApplicationController
   def index
-    @siteswaps = Siteswap.order(:difficulty)
+    @siteswaps = Siteswap.order(:ball_count)
   end
 end
