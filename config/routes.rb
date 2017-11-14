@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'catalogue/seven_ball'
+
+  get 'catalogue/six_ball'
+
+  get 'catalogue/five_ball'
+
+  get 'catalogue/three_ball'
+
   get 'catalogue/index'
 
   get 'catalogue/four_ball'

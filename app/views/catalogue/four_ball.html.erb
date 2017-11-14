@@ -1,13 +1,11 @@
-<p id="notice"><%= notice %></p>
-
 <h1>Listing Siteswaps</h1>
 
 <table>
   <body>
-    <% Siteswap.order(:ball_count).each do |siteswap| %>  
+    <% @siteswaps.each do |siteswap| %>  
       <%= content_tag :tr, class: cycle('list_line_odd', 'list_line_even') do %>
   <td>
-  <% if siteswap.ball_count == 5 %>
+  <% if siteswap.ball_count == 4 %>
     <%= image_tag(siteswap.image_url, class: 'list_image', height: 200, width: 200) %>
   </td>
         <td class='list_description'>
