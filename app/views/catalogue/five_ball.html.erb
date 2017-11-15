@@ -1,0 +1,24 @@
+<h1>Five Ball Siteswaps</h1>
+
+<table>
+  <body>
+    <% @siteswaps.each do |siteswap| %>  
+      <%= content_tag :tr, class: cycle('list_line_odd', 'list_line_even') do %>
+  <td>
+  <% if siteswap.ball_count == 5 %>
+    <%= image_tag(siteswap.image_url, class: 'list_image', height: 200, width: 200) %>
+  </td>
+        <td class='list_description'>
+  <dl>
+      <h3><b><%= siteswap.name %></b></h3>
+      <%= truncate strip_tags(siteswap.description), length: 240 %>
+      <dt>Difficulty: <%= siteswap.difficulty %></dt>
+  </dl>
+      <% end %>
+    <% end %>
+    <% end %>
+  </body>
+</table>
+
+<br>
+

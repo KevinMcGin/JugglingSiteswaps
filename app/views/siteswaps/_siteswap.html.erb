@@ -1,0 +1,10 @@
+    <%= image_tag(siteswap.image_url, class: 'list_image', height: 200, width: 200) %>
+  </td>
+        <td class='list_description'>
+  <dl>
+      <h3><b><%= siteswap.name %></b></h3>
+      <%= truncate strip_tags(siteswap.description), length: 240 %>
+      <dt>Difficulty: <%= siteswap.difficulty %></dt>
+  </dl>
+
+
