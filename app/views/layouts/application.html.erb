@@ -15,6 +15,7 @@ Siteswaps
 <%= content_tag :body, class: controller.controller_name do %>
 <div id="banner">
   <%= @page_title || "Juggling Siteswaps" %>
+  <li><%= link_to "Home", catalogue_index_path %></li>
   <li><%= link_to "Three Ball", catalogue_three_ball_path %></li> 
   <li><%= link_to "Four Ball", catalogue_four_ball_path %></li>  
   <li><%= link_to "Five Ball", catalogue_five_ball_path %></li>  
