@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :users
   get 'catalogue/seven_ball'
 
   get 'catalogue/six_ball'
