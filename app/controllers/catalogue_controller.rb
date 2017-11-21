@@ -1,5 +1,5 @@
 class CatalogueController < ApplicationController
- 
+  skip_before_action :authorize 
   def index
     @siteswaps = Siteswap.order(:ball_count) 
   end
