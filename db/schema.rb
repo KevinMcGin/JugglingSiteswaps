@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171121104953) do
+ActiveRecord::Schema.define(version: 20171121121058) do
+
+  create_table "requests", force: :cascade do |t|
+    t.string   "name"
+    t.text     "description"
+    t.integer  "difficulty"
+    t.integer  "ball_count"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "siteswaps", force: :cascade do |t|
     t.string   "name"

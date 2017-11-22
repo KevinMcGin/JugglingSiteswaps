@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
-  get 'admin' => 'admin#index'
+  get 'request_submit/index'
+
+ get 'admin' => 'admin#index'
+   resources :requests do 
+    collection do
+      get :submit
+    end
+  end
 
   controller :sessions do
     get 'login' => :new
@@ -8,6 +15,10 @@ Rails.application.routes.draw do
   end
 
   resources :users
+
+  
+  post '/Submit' => 'requests#index'
+  
   get 'catalogue/seven_ball'
 
   get 'catalogue/six_ball'

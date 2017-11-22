@@ -2,6 +2,7 @@
 
 <h1>Listing Siteswaps</h1>
 
+<p><%= link_to 'New Siteswap', new_siteswap_path %>
 <table>
   <body>
     <% @siteswaps.each do |siteswap| %>
@@ -20,8 +21,7 @@
         <td class='list_actions'>
   <%= link_to 'Show', siteswap %><br/>
   <%= link_to 'Edit', edit_siteswap_path(siteswap) %><br/>
-  <%= link_to 'Destroy', siteswap, method: :destroy, 
-      data: { confirm: 'Are you sure?' } %>
+  <%= button_to 'Destroy', siteswap, method: :delete, data: { confirm: 'Are you sure?' } %>
 </td>
       <% end %>
     <% end %>
@@ -30,4 +30,3 @@
 
 <br>
 
-<%= link_to 'New Siteswap', new_siteswap_path %>

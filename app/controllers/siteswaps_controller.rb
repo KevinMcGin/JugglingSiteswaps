@@ -69,6 +69,6 @@ class SiteswapsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def siteswap_params
-      params.require(:siteswap).permit(:name, :description, :difficulty, :image_url,:ball_count)
+      params.permit(:siteswap,:name, :description, :difficulty, :image_url,:ball_count)
     end
 end

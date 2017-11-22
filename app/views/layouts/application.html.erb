@@ -12,17 +12,28 @@ Siteswaps
 </head>
 <body style="background-color: #000000">
 
+<% if session[:user_id] %>
+  <br />
+  <%= link_to 'Siteswaps',   siteswaps_path   %><br/>
+  <%= link_to 'Requests', requests_path %><br/>
+  <%= link_to 'Users',    users_path    %><br/>
+  <br />
+  <%= button_to 'Logout', logout_path, :method => :delete   %>
+<% end %>
+
 <%= content_tag :body, class: controller.controller_name do %>
-<div id="banner">
+<div id="balls">
   <%= @page_title || "Juggling Siteswaps" %>
   <li><%= link_to "Home", catalogue_index_path %></li>
   <li><%= link_to "Three Ball", catalogue_three_ball_path %></li> 
   <li><%= link_to "Four Ball", catalogue_four_ball_path %></li>  
   <li><%= link_to "Five Ball", catalogue_five_ball_path %></li>  
   <li><%= link_to "Six Ball", catalogue_six_ball_path %></li>  
-  <li><%= link_to "Seven Ball", catalogue_seven_ball_path %></li>  
- 
+  <li><%= link_to "Seven Ball", catalogue_seven_ball_path %></li>   
 </div>
+<div id="requests">
+  <p><%= link_to "Suggest Siteswap", request_submit_index_path %></p>
+</div> 
   <%= yield %>
 <% end %>
 
